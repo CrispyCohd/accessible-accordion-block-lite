@@ -1,0 +1,10 @@
+/* Editor-specific styling mirroring front‑end */
+.aab_lite-accordion .aab_lite-accordion-content {
+    padding-left: var(--wp--preset--spacing--20, 1rem);
+    border-left: 4px solid #ddd;
+}
+
+/* Hide the separator when the toggle is off */
+.wp-block-aab_lite-accordion[data-show-divider="false"] .aab_lite-accordion-divider {
+    display: none;
+}

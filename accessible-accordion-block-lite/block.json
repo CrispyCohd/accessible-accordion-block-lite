@@ -1,0 +1,15 @@
+{
+  "apiVersion": 3,
+  "name": "aab-lite/accordion",
+  "title": "Accessible Accordion (Lite)",
+  "category": "widgets",
+  "description": "A minimal, accessible accordion block for demo/review purposes.",
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./src/index.js",
+  "style": "file:./src/styles/style.scss",
+  "editorStyle": "file:./src/styles/editor.scss",
+  "viewScriptModule": "file:./src/js/frontend.js",
+  "textdomain": "accessible-accordion-block-lite"
+}

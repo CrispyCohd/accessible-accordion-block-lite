@@ -1,0 +1,71 @@
+.aab_lite-accordion {
+    --aab_lite-duration: 300ms;
+}
+
+.aab_lite-accordion .aab_lite-accordion-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aab_lite-accordion .aab_lite-accordion-content {
+    overflow: hidden;
+    max-height: 0;
+}
+
+.aab_lite-accordion.is-open .aab_lite-accordion-content {
+    max-height: 9999px; /* Fallback for slide */
+}
+
+/* Fade mode handled via JS opacity */
+.aab_lite-accordion-divider {
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--wp--preset--color--contrast-3, #ddd);
+}
+
+/* Hide the separator when the toggle is off */
+.wp-block-aab_lite-accordion[data-show-divider="false"] .aab_lite-accordion-divider {
+    display: none;
+}
+
+/* 1) Hide the plugin's default caret/icon (svg or img) */
+.wp-block-aab_lite-accordion .aab_lite-accordion-icon > * {
+	display: none !important;
+}
+
+/* 2) Base icon element */
+.wp-block-aab_lite-accordion .aab_lite-accordion-icon {
+	position: relative;
+	width: .5em;
+	height: .5em;
+	display: inline-block;
+	text-align: center;
+	line-height: 1;
+	font-weight: 400;
+	font-size: 1.5em;
+	align-self: baseline;
+	margin: 10px;
+}
+
+/* Shared pseudo-element surface */
+.wp-block-aab_lite-accordion .aab_lite-accordion-icon::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+/* 3) Collapsed state = plus (inline SVG, stroke=currentColor) */
+.wp-block-aab_lite-accordion:not(.is-open) .aab_lite-accordion-icon::before {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><path d='M8 2v12M2 8h12'/></svg>");
+}
+
+/* 4) Open state = minus (inline SVG, stroke=currentColor) */
+.wp-block-aab_lite-accordion.is-open .aab_lite-accordion-icon::before {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><path d='M2 8h12'/></svg>");
+}

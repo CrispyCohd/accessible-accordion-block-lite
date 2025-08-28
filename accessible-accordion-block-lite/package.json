@@ -1,0 +1,19 @@
+{
+  "name": "accessible-accordion-block-lite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A minimal, accessible Gutenberg accordion block demo.",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint": "wp-scripts lint-js"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.0.0",
+    "sass": "^1.77.0"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ]
+}

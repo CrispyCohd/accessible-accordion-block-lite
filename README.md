@@ -40,9 +40,6 @@ Proprietary — Evaluation Only. © 2025 Marcus Albon. All rights reserved.
 accessible-accordion-block-lite/
 ├─ block.json
 ├─ package.json
-├─ README.md
-├─ LICENSE
-├─ .gitignore
 └─ src/
    ├─ index.js                # Editor entry
    ├─ js/
